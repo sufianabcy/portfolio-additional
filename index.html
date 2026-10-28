@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sufian Choudhury</title>
+    <meta name="description" content="I build systems that notice when something changes and say what to do next: detection engines, drift-aware models and the apps around them." />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Sufian Choudhury" />
+    <meta property="og:description" content="Full-stack, security and AI engineer. Projects, experience and how to get in touch." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet" />
+    <script>
+      // Apply the saved theme before the first paint.
+      try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div class="page">
+      <header class="hero" id="top">
+        <div class="hero__head">
+          <div>
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Full-Stack · Security · AI Engineer</p>
+            <h1>Sufian Choudhury</h1>
+            <p class="hero__sub">CS Undergraduate @ KL University</p>
+          </div>
+          <button class="seed" type="button" title="Today's pattern. Click for another.">
+            <canvas aria-hidden="true"></canvas>
+            <span class="seed__label">SEED::DAY-000</span>
+          </button>
+        </div>
+
+        <button class="search-trigger" type="button" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+          search <kbd class="kbd-mod">⌘K</kbd>
+        </button>
+
+        <div class="intro" id="content">
+          <p class="lead">
+            The through-line across my work: <span class="hl">I build systems that notice when something changes — an
+            attacker on a host, drift in a data stream, a step that breaks in an app — and say what to do next.</span>
+          </p>
+          <p>
+            I didn't just want to read about detection rules — I built
+            <a href="https://github.com/sufianabcy/behavioral-detection-engine">Behavioral Threat Intelligence</a> to
+            simulate MITRE ATT&amp;CK-style attacks and score every event on a live SOC dashboard. I didn't just want to
+            hear that models go stale — with <a href="https://github.com/sufianabcy/DriftBound">DriftBound</a> my team
+            built a streaming classifier that detects concept drift and proves where zero error is possible.
+          </p>
+          <p>
+            Full-stack apps like <a href="https://github.com/sufianabcy/scheduler">Planner</a>,
+            <a href="https://true-delivery-frontend.vercel.app">TrueDelivery</a> and
+            <a href="https://healthcore-eight.vercel.app">HealthCore</a> are where I learned to ship end to end; tools
+            like <a href="https://github.com/sufianabcy/fsd-debugger">fsd</a> and
+            <a href="https://github.com/sufianabcy/Admission-Assistance">EduPilot</a> are where I learned to make a
+            hard problem explain itself.
+          </p>
+          <nav class="quicklinks" aria-label="Profiles">
+            <a href="https://github.com/sufianabcy">github/sufianabcy</a><span aria-hidden="true">/</span>
+            <a href="https://www.linkedin.com/in/sufian0/">linkedin</a><span aria-hidden="true">/</span>
+            <a href="mailto:contact.sufianchoudhury@gmail.com">email</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="experience" aria-labelledby="experience-h">
+          <header class="section-head"><h2 id="experience-h">Work &amp; Experience</h2><span class="section-head__meta">history</span></header>
+          <ol class="list">
+            <li class="job">
+              <div class="row"><h3>Engineering Intern</h3><span class="when"><!-- TODO: dates, e.g. Dec 2025 – Jan 2026 --></span></div>
+              <p class="org"><span class="org__name">Espaze.in</span></p>
+              <p class="desc">
+                Built the image pipeline for seller product photos: a Go compression API that shrinks uploads 10–15×
+                (a 5 MB photo to about 350 KB) without visible loss, keeping the original format, resizing anything
+                over 1200 px and stripping EXIF and GPS metadata, plus a Google Cloud Function that stores the results
+                in Cloud Storage.
+              </p>
+              <ul class="chips"><li>Go</li><li>Image Processing</li><li>REST APIs</li><li>Cloud Functions</li><li>Cloud Storage</li></ul>
+            </li>
+            <li class="job">
+              <div class="row"><h3>Outreach Lead</h3><span class="when"><!-- TODO: dates --></span></div>
+              <p class="org"><span class="org__name">KL-CIIE</span><span class="sep">·</span>KL University</p>
+              <p class="desc">
+                Lead outreach for KL University's innovation and entrepreneurship centre. Led our team to
+                1st Prize at EDD Enigma and 3rd place at the EDD Conference, organised by IIT Madras.
+              </p>
+              <ul class="chips"><li>Leadership</li><li>Outreach</li><li>Entrepreneurship</li></ul>
+            </li>
+            <li class="job">
+              <div class="row"><h3>B.Tech, Computer Science &amp; Engineering</h3><span class="when">2024 – 2028</span></div>
+              <p class="org"><span class="org__name">KL University</span><span class="sep">·</span>Guntur, Andhra Pradesh</p>
+              <p class="desc">
+                Specialising in cybersecurity, alongside full-stack development, service-oriented architecture,
+                computer networks and machine learning.
+              </p>
+              <ul class="chips"><li>Cybersecurity</li><li>Full-Stack</li><li>Networks</li><li>Machine Learning</li></ul>
+            </li>
+          </ol>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-h">
+          <header class="section-head"><h2 id="projects-h">Selected Projects</h2><span class="section-head__meta" data-count>08 entries</span></header>
+
+          <h3 class="group"><span class="group__num">01</span><span class="group__slash">/</span>Security &amp; AI</h3>
+          <div class="list">
+            <article class="project" data-repo="behavioral-detection-engine">
+              <div class="row">
+                <h4><span class="project__name">Behavioral Threat Intelligence</span> <span class="tagline">— Behavioral detection engine with a live SOC dashboard</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/behavioral-detection-engine">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="amber">active dev</span><span class="activity"></span></div>
+              <p class="desc">
+                Simulates MITRE ATT&amp;CK-style attacks (PowerShell macros, WMI lateral movement, certutil abuse) next to
+                normal activity, scores every event with a behavioral detection engine that correlates activity per
+                host, and raises alerts on a live SOC dashboard.
+              </p>
+              <ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>MITRE ATT&amp;CK</li></ul>
+            </article>
+            <article class="project" data-repo="DriftBound">
+              <div class="row">
+                <h4><span class="project__name">DriftBound</span> <span class="tagline">— Concept-drift detection with proofs</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/DriftBound">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="violet">hackathon</span><span class="activity"></span></div>
+              <p class="desc">
+                A streaming classifier that detects concept drift and relearns after it, with proofs of exactly where
+                zero error is possible and where it isn't. A live dashboard lets you break each condition and watch the
+                guarantee fail. Built for the RVIT hackathon by Team Syntax Squad.
+              </p>
+              <ul class="chips"><li>Python</li><li>River</li><li>NumPy</li><li>React</li><li>TypeScript</li><li>WebSocket</li></ul>
+            </article>
+            <article class="project" data-repo="Admission-Assistance">
+              <div class="row">
+                <h4><span class="project__name">EduPilot</span> <span class="tagline">— AI admissions counsellor</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/Admission-Assistance">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge">mvp</span><span class="activity"></span></div>
+              <p class="desc">
+                An AI admissions counsellor for engineering aspirants in India. Set your exam, rank, budget, state and
+                branch, then chat with an agent that returns full, ranked college lists with deadlines and details.
+              </p>
+              <ul class="chips"><li>Python</li><li>LangGraph</li><li>LangChain</li><li>Groq</li><li>ChromaDB</li><li>Streamlit</li></ul>
+            </article>
+          </div>
+
+          <h3 class="group"><span class="group__num">02</span><span class="group__slash">/</span>Full-Stack Applications</h3>
+          <div class="list">
+            <article class="project" data-repo="scheduler">
+              <div class="row">
+                <h4><span class="project__name">Planner</span> <span class="tagline">— Daily planner that installs as an app</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/scheduler">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="amber">active dev</span><span class="activity"></span></div>
+              <p class="desc">
+                A daily planner with monthly goals and step-by-step projects. Quick add understands lines like
+                “gym tomorrow 7am every mon wed p1”, reminders arrive as push notifications, and it installs as an app
+                on Android and Mac, with Gmail, Outlook and KL University LMS sync.
+              </p>
+              <ul class="chips"><li>Preact</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Web Push</li><li>AWS</li></ul>
+            </article>
+            <article class="project" data-repo="TrueDelivery-frontend">
+              <div class="row">
+                <h4><span class="project__name">TrueDelivery</span> <span class="tagline">— Income protection for delivery partners</span></h4>
+                <span class="links"><a href="https://true-delivery-frontend.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/TrueDelivery-frontend">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="green">live</span><span class="activity"></span></div>
+              <p class="desc">
+                AI-powered parametric income protection for delivery partners. When a verified disruption hits — heavy
+                rain, extreme heat, severe AQI, a platform outage or a curfew — payouts are triggered automatically.
+                Worker onboarding, a live disruption monitor, a claims timeline and worker and admin dashboards.
+              </p>
+              <ul class="chips"><li>React</li><li>Vite</li><li>Node.js</li><li>Recharts</li></ul>
+            </article>
+            <article class="project" data-repo="HealthCore-frontend">
+              <div class="row">
+                <h4><span class="project__name">HealthCore</span> <span class="tagline">— Healthcare platform for four roles</span></h4>
+                <span class="links"><a href="https://healthcore-eight.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/HealthCore-frontend">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="green">live</span><span class="activity"></span></div>
+              <p class="desc">
+                A hospital system where patients book appointments and keep records, doctors manage schedules and
+                prescriptions, pharmacists run inventory and orders, and admins oversee it all, each behind its own
+                protected dashboard.
+              </p>
+              <ul class="chips"><li>React</li><li>Spring Boot</li><li>Java</li><li>Tailwind CSS</li><li>Docker</li></ul>
+            </article>
+          </div>
+
+          <h3 class="group"><span class="group__num">03</span><span class="group__slash">/</span>Developer Tools</h3>
+          <div class="list">
+            <article class="project" data-repo="fsd-debugger">
+              <div class="row">
+                <h4><span class="project__name">fsd</span> <span class="tagline">— Step-by-step flow tracer for Spring Boot</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/fsd-debugger">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge">pre-release</span><span class="activity"></span></div>
+              <p class="desc">
+                Starts your Spring Boot app, follows it through startup and every request using its own logs, and when a
+                step fails, checks your source for the usual causes and tells you the fix: which file, which line, what
+                to add. No AI, no network, and it never changes your files.
+              </p>
+              <ul class="chips"><li>Python</li><li>Spring Boot</li><li>CLI</li></ul>
+            </article>
+            <article class="project" data-repo="eye-wallpaper">
+              <div class="row">
+                <h4><span class="project__name">Eye Wallpaper</span> <span class="tagline">— A moving wallpaper for every desktop</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/eye-wallpaper">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge">cross-platform</span><span class="activity"></span></div>
+              <p class="desc">
+                Turns a Pygame artwork by mishratanya2311, a giant eye made of words, into a seamless 63-second loop and sets
+                it as your moving desktop, lock screen or screen saver on macOS, Windows and Linux.
+              </p>
+              <ul class="chips"><li>Python</li><li>Pygame</li><li>Swift</li><li>Shell</li></ul>
+            </article>
+          </div>
+          <a class="more" href="https://github.com/sufianabcy?tab=repositories">browse all repositories on github →</a>
+        </section>
+
+        <section id="stack" aria-labelledby="stack-h">
+          <header class="section-head"><h2 id="stack-h">Technical Stack</h2><span class="section-head__meta">index</span></header>
+          <dl class="stack">
+            <dt>Languages</dt>
+            <dd><ul class="chips chips--outline"><li>Java</li><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>Kotlin</li><li>SQL</li><li>Bash</li></ul></dd>
+            <dt>Frameworks &amp; Runtime</dt>
+            <dd><ul class="chips chips--outline"><li>Spring Boot</li><li>React</li><li>Node.js &amp; Express</li><li>FastAPI</li><li>Preact</li><li>Streamlit</li></ul></dd>
+            <dt>AI &amp; Data</dt>
+            <dd><ul class="chips chips--outline"><li>LangChain &amp; LangGraph</li><li>ChromaDB</li><li>River &amp; NumPy</li><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>MongoDB</li><li>Elasticsearch</li></ul></dd>
+            <dt>Cloud &amp; DevOps</dt>
+            <dd><ul class="chips chips--outline"><li>AWS</li><li>Google Cloud</li><li>Docker</li><li>GitHub Actions</li><li>Vercel</li></ul></dd>
+            <dt>Security &amp; Systems</dt>
+            <dd><ul class="chips chips--outline"><li>MITRE ATT&amp;CK</li><li>Kali Linux</li><li>Linux</li><li>Networking</li><li>Solidity &amp; Ethereum</li></ul></dd>
+          </dl>
+        </section>
+
+        <section id="recognition" aria-labelledby="recognition-h">
+          <header class="section-head"><h2 id="recognition-h">Hackathons &amp; Recognition</h2><span class="section-head__meta">awards</span></header>
+          <p class="section-lead">
+            Ideas built against the clock: 24-hour hackathons, national AI/ML challenges and entrepreneurship
+            competitions with the KL-CIIE team.
+          </p>
+          <div class="awards">
+            <details class="award">
+              <summary>
+                <span class="award__badge">1st Prize</span><span class="award__title">EDD Enigma</span>
+                <span class="when"><!-- TODO: date --></span><span class="award__toggle" aria-hidden="true"></span>
+                <span class="award__org">KL-CIIE team</span>
+              </summary>
+              <p>Led the KL-CIIE team to first prize.</p>
+            </details>
+            <details class="award">
+              <summary>
+                <span class="award__badge">3rd Place</span><span class="award__title">EDD Conference</span>
+                <span class="when"><!-- TODO: date --></span><span class="award__toggle" aria-hidden="true"></span>
+                <span class="award__org">Organised by IIT Madras<span class="sep">·</span>KL-CIIE team</span>
+              </summary>
+              <p>Placed third with the KL-CIIE team at the EDD Conference, organised by IIT Madras.</p>
+            </details>
+            <details class="award">
+              <summary>
+                <span class="award__badge">Participant</span><span class="award__title">RVIT Hackathon</span>
+                <span class="when">2026</span><span class="award__toggle" aria-hidden="true"></span>
+                <span class="award__org">Team Syntax Squad<span class="sep">·</span>DriftBound</span>
+              </summary>
+              <p>Built <a href="https://github.com/sufianabcy/DriftBound">DriftBound</a>: a drift-adaptive streaming classifier with proven bounds and a live dashboard.</p>
+            </details>
+            <details class="award">
+              <summary>
+                <span class="award__badge">Participant</span><span class="award__title">National AI/ML Hackathon by Vivriti Capital</span>
+                <span class="when">2026</span><span class="award__toggle" aria-hidden="true"></span>
+                <span class="award__org">YUVAAN, IIT Hyderabad<span class="sep">·</span>Team O(1)</span>
+              </summary>
+              <p>A national AI/ML hackathon run as part of YUVAAN at IIT Hyderabad.</p>
+            </details>
+            <details class="award">
+              <summary>
+                <span class="award__badge">Participant</span><span class="award__title">HackWithAI</span>
+                <span class="when">2026</span><span class="award__toggle" aria-hidden="true"></span>
+                <span class="award__org">KLH Bachupally ACM Student Chapter</span>
+              </summary>
+              <p>Telangana's largest 24-hour offline AI hackathon.</p>
+            </details>
+          </div>
+        </section>
+
+        <section id="writing" aria-labelledby="writing-h">
+          <header class="section-head"><h2 id="writing-h">Write-ups &amp; Technical Docs</h2><a class="section-head__meta section-head__link" href="https://github.com/sufianabcy?tab=repositories">all repositories →</a></header>
+          <p class="section-lead">
+            The long-form READMEs, specs and guides behind the projects: what each one does, how it's built and how
+            to run it.
+          </p>
+          <ul class="notes">
+            <li><a class="note" href="https://github.com/sufianabcy/DriftBound#readme">
+              <span class="row"><span class="note__title">DriftBound — Where Zero Error Is Possible, and Where It Isn't</span><span class="when">October 2026</span></span>
+              <span class="note__desc">The guarantees behind a drift-adaptive classifier, and the impossibility results that show why each condition is needed.</span>
+              <span class="chips chips--small"><span>Machine Learning</span><span>Research</span></span>
+            </a></li>
+            <li><a class="note" href="https://github.com/sufianabcy/fsd-debugger#readme">
+              <span class="row"><span class="note__title">fsd — Turning Spring Boot Errors Into One-Line Fixes</span><span class="when">October 2026</span></span>
+              <span class="note__desc">How a rule-based tracer follows startup and each request through the logs, then names the file, line and fix.</span>
+              <span class="chips chips--small"><span>Developer Tools</span><span>Spring Boot</span></span>
+            </a></li>
+            <li><a class="note" href="https://github.com/sufianabcy/scheduler/blob/main/SPEC.md">
+              <span class="row"><span class="note__title">Planner — The Spec</span><span class="when">October 2026</span></span>
+              <span class="note__desc">Logins, the daily plan, repeating tasks, reminders, priorities and one-line quick add.</span>
+              <span class="chips chips--small"><span>Product</span><span>Full-Stack</span></span>
+            </a></li>
+            <li><a class="note" href="https://github.com/sufianabcy/scheduler/blob/main/DEPLOY.md">
+              <span class="row"><span class="note__title">Planner — Deploying to AWS</span><span class="when">October 2026</span></span>
+              <span class="note__desc">A server, a fixed IP, S3 backups, HTTPS, auto-deploy from GitHub, and Gmail and Outlook setup.</span>
+              <span class="chips chips--small"><span>AWS</span><span>DevOps</span></span>
+            </a></li>
+            <li><a class="note" href="https://github.com/sufianabcy/eye-wallpaper#readme">
+              <span class="row"><span class="note__title">Eye Wallpaper — One Moving Wallpaper, Three Operating Systems</span><span class="when">October 2026</span></span>
+              <span class="note__desc">Rendering a Pygame artwork into a seamless loop and setting it as a live wallpaper on macOS, Windows and Linux.</span>
+              <span class="chips chips--small"><span>Python</span><span>Cross-Platform</span></span>
+            </a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <nav aria-label="Contact">
+          <a href="mailto:contact.sufianchoudhury@gmail.com">Email</a>
+          <a href="https://github.com/sufianabcy">GitHub</a>
+          <a href="https://www.linkedin.com/in/sufian0/">LinkedIn</a>
+        </nav>
+        <span class="footer__right">
+          <span>© <span data-year>2026</span> Sufian Choudhury</span>
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          </button>
+        </span>
+      </footer>
+    </div>
+
+    <div class="palette" hidden>
+      <div class="palette__backdrop" data-close></div>
+      <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Search">
+        <label class="palette__input">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+          <input type="text" placeholder="Search projects, docs, sections, actions…" autocomplete="off" spellcheck="false"
+            role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" />
+          <kbd>ESC</kbd>
+        </label>
+        <div class="palette__list" id="palette-list" role="listbox"></div>
+        <div class="palette__foot">
+          <span><kbd>↑↓</kbd> navigate</span><span><kbd>↵</kbd> select</span><span class="palette__quick"><kbd>/</kbd> quick search</span>
+        </div>
+      </div>
+    </div>
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
