@@ -250,6 +250,35 @@ h3, h4 { font-size: 16px; line-height: 1.5; font-weight: 500; color: var(--headi
 }
 .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
 
+/* Retype: a phrase that erases and types itself back on hover */
+.retype { display: inline-block; cursor: text; transition: color 0.15s; }
+.retype:hover { color: var(--accent-strong); }
+.hl .retype { text-decoration: inherit; }
+.retype.is-typing { font-family: var(--mono); color: var(--accent-strong); background: var(--accent-soft); padding: 0 2px; border-radius: 4px; }
+.retype__caret { display: inline-block; width: 1ch; background: currentColor; animation: blink 1s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: 0.5; } }
+
+/* Peek: the project card that follows the cursor */
+.peek {
+  position: fixed; left: 0; top: 0; z-index: 40; width: 230px; padding: 12px; border-radius: 12px;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); pointer-events: none;
+  opacity: 0; scale: 0.95; transform-origin: top left; transition: opacity 0.12s ease-out, scale 0.12s ease-out;
+}
+.peek.is-on { opacity: 1; scale: 1; }
+.peek__head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.peek__head::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.peek__title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; font-weight: 500; color: var(--heading); }
+.peek__status {
+  margin-left: auto; flex-shrink: 0; padding: 0 6px; border-radius: 4px; background: var(--chip-bg); color: var(--muted);
+  font: 400 9px/1.7 var(--mono); text-transform: uppercase;
+}
+.peek__text {
+  margin: 0 0 8px; font-size: 11px; line-height: 1.6; color: var(--muted);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.peek__chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; font: 400 9px/1.7 var(--mono); }
+.peek__chips li { padding: 0 6px; border-radius: 4px; background: var(--chip-bg); color: var(--chip-text); }
+
 /* Phones */
 @media (max-width: 600px) {
   .page { padding: 56px 16px 40px; }

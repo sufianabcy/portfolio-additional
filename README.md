@@ -6,6 +6,9 @@ dark themes. It has:
 - **Search** (⌘K / Ctrl K, or /): jump to any project, section or write-up, switch the theme, or copy the email address.
 - **Live GitHub activity**: each project shows when it was last pushed and a 12-week commit sparkline. Data comes from
   the public GitHub API in the visitor's browser and is cached for an hour. If GitHub can't be reached, it's left out.
+- **Text effects**: a few phrases in the intro erase and retype themselves on hover (mark one with
+  `<span class="retype">`), and hovering a project named in the intro shows a small card that follows the cursor, filled
+  from that project's entry (`data-project` is its `data-repo`).
 - **Today's seed**: the little network next to the name is drawn from the day of the year, so it changes daily. Click
   it for a random one.
 

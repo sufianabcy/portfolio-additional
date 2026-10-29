@@ -365,6 +365,103 @@ function setupPalette() {
   });
 }
 
+/* Retype: hovering a marked phrase erases it and types it back. */
+
+function setupRetype() {
+  if (reduced) return;
+  for (const el of document.querySelectorAll('.retype')) {
+    const text = el.textContent;
+    const caret = document.createElement('span');
+    caret.className = 'retype__caret';
+    caret.setAttribute('aria-hidden', 'true');
+    caret.textContent = '_';
+    let busy = false;
+    el.title = 'Hover to retype';
+    el.addEventListener('mouseenter', () => {
+      if (busy) return;
+      busy = true;
+      el.classList.add('is-typing');
+      const typed = document.createTextNode(text);
+      el.replaceChildren(typed, caret);
+      const n = text.length;
+      for (let i = n; i >= 0; i--) setTimeout(() => { typed.data = text.slice(0, i); }, (n - i) * 18);
+      const start = n * 18 + 40;
+      for (let i = 1; i <= n; i++) {
+        setTimeout(() => {
+          typed.data = text.slice(0, i);
+          if (i < n) return;
+          el.replaceChildren(text);
+          el.classList.remove('is-typing');
+          busy = false;
+        }, start + i * 20);
+      }
+    });
+  }
+}
+
+/* Peek: a small card that follows the cursor over a project named in the intro. */
+
+function setupPeek() {
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const card = document.createElement('div');
+  card.className = 'peek';
+  card.setAttribute('aria-hidden', 'true');
+  card.innerHTML = '<div class="peek__head"><span class="peek__title"></span><span class="peek__status"></span></div><p class="peek__text"></p><ul class="peek__chips"></ul>';
+  document.body.append(card);
+  const [title, status, text, chips] = ['.peek__title', '.peek__status', '.peek__text', '.peek__chips'].map((s) => card.querySelector(s));
+  const pos = { x: 0, y: 0 };
+  const goal = { x: 0, y: 0 };
+  let frame = 0;
+
+  function fill(project) {
+    title.textContent = project.querySelector('.project__name').textContent;
+    status.textContent = project.querySelector('.badge')?.textContent ?? '';
+    text.textContent = project.querySelector('.tagline').textContent.replace(/^—\s*/, '');
+    chips.replaceChildren(...[...project.querySelectorAll('.chips li')].slice(0, 3).map((li) => {
+      const chip = document.createElement('li');
+      chip.textContent = li.textContent;
+      return chip;
+    }));
+  }
+  // Sit below and right of the cursor, flipping to the other side near the window's edge.
+  function aim(e) {
+    const w = card.offsetWidth, h = card.offsetHeight;
+    goal.x = e.clientX + 16 + w > innerWidth - 10 ? e.clientX - w - 16 : e.clientX + 16;
+    goal.y = e.clientY + 16 + h > innerHeight - 10 ? e.clientY - h - 16 : e.clientY + 16;
+  }
+  function place() { card.style.translate = `${pos.x}px ${pos.y}px`; }
+  function follow() {
+    pos.x += (goal.x - pos.x) * 0.18;
+    pos.y += (goal.y - pos.y) * 0.18;
+    place();
+    frame = requestAnimationFrame(follow);
+  }
+
+  for (const link of document.querySelectorAll('a[data-project]')) {
+    const project = document.querySelector(`.project[data-repo="${link.dataset.project}"]`);
+    if (!project) continue;
+    link.addEventListener('mouseenter', (e) => {
+      fill(project);
+      aim(e);
+      Object.assign(pos, goal);
+      place();
+      card.classList.add('is-on');
+      cancelAnimationFrame(frame);
+      if (!reduced) frame = requestAnimationFrame(follow);
+    });
+    link.addEventListener('mousemove', (e) => {
+      aim(e);
+      if (reduced) { Object.assign(pos, goal); place(); }
+    });
+    link.addEventListener('mouseleave', () => {
+      card.classList.remove('is-on');
+      cancelAnimationFrame(frame);
+    });
+  }
+}
+
 setupSeed();
 setupPalette();
 setupActivity();
+setupRetype();
+setupPeek();
