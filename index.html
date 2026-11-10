@@ -47,9 +47,9 @@
             attacker on a host, drift in a data stream, a step that breaks in an app — and say what to do next.</span>
           </p>
           <p>
-            I didn't just want to read about <span class="retype">detection rules</span> — I built
-            <a href="https://github.com/sufianabcy/behavioral-detection-engine" data-project="behavioral-detection-engine">Behavioral Threat Intelligence</a> to
-            simulate MITRE ATT&amp;CK-style attacks and score every event on a live SOC dashboard. I didn't just want to
+            I didn't just want to read about <span class="retype">detection rules</span> — I built a
+            <a href="https://github.com/sufianabcy/behavioral-detection-engine" data-project="behavioral-detection-engine">Behavioral Detection Engine</a> that
+            catches attackers hiding in built-in Windows tools, with zero false alarms on its demo network. I didn't just want to
             hear that models go stale — with <a href="https://github.com/sufianabcy/DriftBound" data-project="DriftBound">DriftBound</a> my team
             built a streaming classifier that detects <span class="retype">concept drift</span> and proves where zero error is possible.
           </p>
@@ -57,9 +57,9 @@
             Full-stack apps like <a href="https://github.com/sufianabcy/scheduler" data-project="scheduler">Planner</a>,
             <a href="https://true-delivery-frontend.vercel.app" data-project="TrueDelivery-frontend">TrueDelivery</a> and
             <a href="https://healthcore-eight.vercel.app" data-project="HealthCore-frontend">HealthCore</a> are where I learned to ship <span class="retype">end to end</span>; tools
-            like <a href="https://github.com/sufianabcy/fsd-debugger" data-project="fsd-debugger">fsd</a> and
-            <a href="https://github.com/sufianabcy/Admission-Assistance" data-project="Admission-Assistance">EduPilot</a> are where I learned to make a
-            hard problem explain itself.
+            like <a href="https://github.com/sufianabcy/mac-edge" data-project="mac-edge">EdgePal</a>, which reads a Mac
+            trackpad's raw touches, and <a href="https://github.com/sufianabcy/fsd-debugger" data-project="fsd-debugger">fsd</a>
+            are where I learned to go below the surface and make a hard problem explain itself.
           </p>
           <nav class="quicklinks" aria-label="Profiles">
             <a href="https://github.com/sufianabcy">github/sufianabcy</a><span aria-hidden="true">/</span>
@@ -106,22 +106,25 @@
         </section>
 
         <section id="projects" aria-labelledby="projects-h">
-          <header class="section-head"><h2 id="projects-h">Selected Projects</h2><span class="section-head__meta" data-count>08 entries</span></header>
+          <header class="section-head"><h2 id="projects-h">Selected Projects</h2><span class="section-head__meta" data-count>09 entries</span></header>
 
           <h3 class="group"><span class="group__num">01</span><span class="group__slash">/</span>Security &amp; AI</h3>
           <div class="list">
             <article class="project" data-repo="behavioral-detection-engine">
               <div class="row">
-                <h4><span class="project__name">Behavioral Threat Intelligence</span> <span class="tagline">— Behavioral detection engine with a live SOC dashboard</span></h4>
+                <h4><span class="project__name">Behavioral Detection Engine</span> <span class="tagline">— Catches living-off-the-land attacks in Windows logs</span></h4>
                 <span class="links"><a href="https://github.com/sufianabcy/behavioral-detection-engine">source ↗</a></span>
               </div>
-              <div class="meta"><span class="badge" data-tone="amber">active dev</span><span class="activity"></span></div>
+              <div class="meta"><span class="badge" data-tone="green">complete</span><span class="activity"></span></div>
               <p class="desc">
-                Simulates MITRE ATT&amp;CK-style attacks (PowerShell macros, WMI lateral movement, certutil abuse) next to
-                normal activity, scores every event with a behavioral detection engine that correlates activity per
-                host, and raises alerts on a live SOC dashboard.
+                Finds attackers who misuse built-in Windows tools like PowerShell, WMI and certutil by reading behaviour
+                in event logs, not by hunting for malware files. It builds process trees, fires 23 Sigma rules, links
+                them into attack chains with risk scores and traces server attacks back to the first infected
+                workstation. On a simulated company network it raises 4 incidents for 4 attack chains with zero false
+                alarms, and across 20 runs it catches 80 of 80 known chains at 93.8% precision. Every detection maps to
+                MITRE ATT&amp;CK.
               </p>
-              <ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>MITRE ATT&amp;CK</li></ul>
+              <ul class="chips"><li>Python</li><li>Sigma</li><li>MITRE ATT&amp;CK</li><li>Windows Event Logs</li><li>pytest</li></ul>
             </article>
             <article class="project" data-repo="DriftBound">
               <div class="row">
@@ -134,7 +137,7 @@
                 zero error is possible and where it isn't. A live dashboard lets you break each condition and watch the
                 guarantee fail. Built for the RVIT hackathon by Team Syntax Squad.
               </p>
-              <ul class="chips"><li>Python</li><li>River</li><li>NumPy</li><li>React</li><li>TypeScript</li><li>WebSocket</li></ul>
+              <ul class="chips"><li>Python</li><li>River</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>WebSocket</li></ul>
             </article>
             <article class="project" data-repo="Admission-Assistance">
               <div class="row">
@@ -165,36 +168,53 @@
               </p>
               <ul class="chips"><li>Preact</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Web Push</li><li>AWS</li></ul>
             </article>
-            <article class="project" data-repo="TrueDelivery-frontend">
-              <div class="row">
-                <h4><span class="project__name">TrueDelivery</span> <span class="tagline">— Income protection for delivery partners</span></h4>
-                <span class="links"><a href="https://true-delivery-frontend.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/TrueDelivery-frontend">source ↗</a></span>
-              </div>
-              <div class="meta"><span class="badge" data-tone="green">live</span><span class="activity"></span></div>
-              <p class="desc">
-                AI-powered parametric income protection for delivery partners. When a verified disruption hits — heavy
-                rain, extreme heat, severe AQI, a platform outage or a curfew — payouts are triggered automatically.
-                Worker onboarding, a live disruption monitor, a claims timeline and worker and admin dashboards.
-              </p>
-              <ul class="chips"><li>React</li><li>Vite</li><li>Node.js</li><li>Recharts</li></ul>
-            </article>
             <article class="project" data-repo="HealthCore-frontend">
               <div class="row">
                 <h4><span class="project__name">HealthCore</span> <span class="tagline">— Healthcare platform for four roles</span></h4>
-                <span class="links"><a href="https://healthcore-eight.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/HealthCore-frontend">source ↗</a></span>
+                <span class="links"><a href="https://healthcore-eight.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/HealthCore-frontend">frontend ↗</a><a href="https://github.com/sufianabcy/HealthCore-backend">backend ↗</a></span>
               </div>
               <div class="meta"><span class="badge" data-tone="green">live</span><span class="activity"></span></div>
               <p class="desc">
                 A hospital system where patients book appointments and keep records, doctors manage schedules and
                 prescriptions, pharmacists run inventory and orders, and admins oversee it all, each behind its own
-                protected dashboard.
+                protected dashboard. A Spring Boot API secured with Spring Security and JWT keeps everything in MySQL
+                and documents itself with OpenAPI; the frontend is React 19 with Tailwind CSS.
               </p>
-              <ul class="chips"><li>React</li><li>Spring Boot</li><li>Java</li><li>Tailwind CSS</li><li>Docker</li></ul>
+              <ul class="chips"><li>Spring Boot</li><li>React</li><li>Spring Security</li><li>JWT</li><li>MySQL</li><li>Docker</li></ul>
+            </article>
+            <article class="project" data-repo="TrueDelivery-frontend">
+              <div class="row">
+                <h4><span class="project__name">TrueDelivery</span> <span class="tagline">— Income protection for delivery partners</span></h4>
+                <span class="links"><a href="https://true-delivery-frontend.vercel.app">live ↗</a><a href="https://github.com/sufianabcy/TrueDelivery-frontend">frontend ↗</a><a href="https://github.com/sufianabcy/TrueDelivery-backend">backend ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="green">live</span><span class="activity"></span></div>
+              <p class="desc">
+                Parametric income protection for delivery partners. When a verified disruption hits — heavy rain,
+                extreme heat, severe AQI, a platform outage or a curfew — payouts are triggered automatically. An
+                Express API simulates disruptions and files the claims; the React app has worker onboarding, a live
+                disruption monitor, a claims timeline, and worker and admin dashboards.
+              </p>
+              <ul class="chips"><li>React</li><li>Node.js</li><li>Express</li><li>Vite</li><li>Recharts</li></ul>
             </article>
           </div>
 
-          <h3 class="group"><span class="group__num">03</span><span class="group__slash">/</span>Developer Tools</h3>
+          <h3 class="group"><span class="group__num">03</span><span class="group__slash">/</span>Systems &amp; Developer Tools</h3>
           <div class="list">
+            <article class="project" data-repo="mac-edge">
+              <div class="row">
+                <h4><span class="project__name">EdgePal</span> <span class="tagline">— The edges of your Mac trackpad, put to work</span></h4>
+                <span class="links"><a href="https://github.com/sufianabcy/mac-edge">source ↗</a></span>
+              </div>
+              <div class="meta"><span class="badge" data-tone="amber">new</span><span class="activity"></span></div>
+              <p class="desc">
+                A native menu bar app that turns the trackpad's edges into controls: press and slide the right edge for
+                volume, the left for brightness, the bottom to scrub whatever is playing, and click the top corners for
+                shortcuts. A small C bridge reads raw finger positions from Apple's private MultitouchSupport framework
+                and drives the Taptic Engine, and a CGEventTap keeps edge clicks away from apps while the pointer stays
+                put.
+              </p>
+              <ul class="chips"><li>Swift</li><li>C</li><li>SwiftUI</li><li>AppKit</li><li>Objective-C</li></ul>
+            </article>
             <article class="project" data-repo="fsd-debugger">
               <div class="row">
                 <h4><span class="project__name">fsd</span> <span class="tagline">— Step-by-step flow tracer for Spring Boot</span></h4>
@@ -228,15 +248,15 @@
           <header class="section-head"><h2 id="stack-h">Technical Stack</h2><span class="section-head__meta">index</span></header>
           <dl class="stack">
             <dt>Languages</dt>
-            <dd><ul class="chips chips--outline"><li>Java</li><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>Kotlin</li><li>SQL</li><li>Bash</li></ul></dd>
+            <dd><ul class="chips chips--outline"><li>Java</li><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Swift</li><li>C</li><li>Go</li><li>Kotlin</li><li>SQL</li><li>Bash</li></ul></dd>
             <dt>Frameworks &amp; Runtime</dt>
-            <dd><ul class="chips chips--outline"><li>Spring Boot</li><li>React</li><li>Node.js &amp; Express</li><li>FastAPI</li><li>Preact</li><li>Streamlit</li></ul></dd>
+            <dd><ul class="chips chips--outline"><li>Spring Boot &amp; Spring Security</li><li>React</li><li>Node.js &amp; Express</li><li>FastAPI</li><li>Preact</li><li>SwiftUI &amp; AppKit</li><li>Streamlit</li></ul></dd>
             <dt>AI &amp; Data</dt>
             <dd><ul class="chips chips--outline"><li>LangChain &amp; LangGraph</li><li>ChromaDB</li><li>River &amp; NumPy</li><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>MongoDB</li><li>Elasticsearch</li></ul></dd>
             <dt>Cloud &amp; DevOps</dt>
             <dd><ul class="chips chips--outline"><li>AWS</li><li>Google Cloud</li><li>Docker</li><li>GitHub Actions</li><li>Vercel</li></ul></dd>
             <dt>Security &amp; Systems</dt>
-            <dd><ul class="chips chips--outline"><li>MITRE ATT&amp;CK</li><li>Kali Linux</li><li>Linux</li><li>Networking</li><li>Solidity &amp; Ethereum</li></ul></dd>
+            <dd><ul class="chips chips--outline"><li>MITRE ATT&amp;CK</li><li>Sigma rules</li><li>Windows event logs</li><li>macOS internals</li><li>Kali Linux</li><li>Linux</li><li>Networking</li><li>Solidity &amp; Ethereum</li></ul></dd>
           </dl>
         </section>
 
@@ -297,6 +317,16 @@
             to run it.
           </p>
           <ul class="notes">
+            <li><a class="note" href="https://github.com/sufianabcy/mac-edge#how-it-works">
+              <span class="row"><span class="note__title">EdgePal — Reading a Mac Trackpad's Raw Touches</span><span class="when">November 2026</span></span>
+              <span class="note__desc">A C bridge to MultitouchSupport, an event tap that holds edge clicks, and reading Now Playing after macOS 15.4 locked it down.</span>
+              <span class="chips chips--small"><span>macOS</span><span>Systems</span></span>
+            </a></li>
+            <li><a class="note" href="https://github.com/sufianabcy/behavioral-detection-engine/blob/main/docs/phase-5-evaluation.md">
+              <span class="row"><span class="note__title">Behavioral Detection Engine — Measuring a Detector Honestly</span><span class="when">November 2026</span></span>
+              <span class="note__desc">Recall, precision and time to detect over 20 seeds, a 24-hour soak test, and the one attack variant it still misses.</span>
+              <span class="chips chips--small"><span>Security</span><span>Evaluation</span></span>
+            </a></li>
             <li><a class="note" href="https://github.com/sufianabcy/DriftBound#readme">
               <span class="row"><span class="note__title">DriftBound — Where Zero Error Is Possible, and Where It Isn't</span><span class="when">October 2026</span></span>
               <span class="note__desc">The guarantees behind a drift-adaptive classifier, and the impossibility results that show why each condition is needed.</span>

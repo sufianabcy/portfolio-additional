@@ -289,6 +289,8 @@ h3, h4 { font-size: 16px; line-height: 1.5; font-weight: 500; color: var(--headi
   .seed__label { font-size: 7px; }
   main > section { margin-top: 72px; }
   .project > .row { flex-wrap: wrap; }
+  /* A short "source" link stays beside the title; a row of three moves below it. */
+  .project h4 { min-width: 60%; }
   .stack { grid-template-columns: 1fr; gap: 8px; }
   .stack dd { margin-bottom: 14px; }
   .award summary .when { grid-column: 3; grid-row: 1; }
